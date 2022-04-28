@@ -1,14 +1,14 @@
 pipeline {
   environment {
-    imagename = "yenigul/hacicenkins"
-    registryCredential = 'yenigul-dockerhub'
+    imagename = "pdesar/nodejsapp"
+    registryCredential = 'docker-hub'
     dockerImage = ''
   }
   agent any
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/ismailyenigul/hacicenkins.git', branch: 'master', credentialsId: 'ismailyenigul-github-user-token'])
+        git([url: 'https://github.com/ctorresso/Pipeline.git', branch: 'main', credentialsId: 'ctorresso-github-user-token'])
 
       }
     }
