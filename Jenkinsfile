@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/ctorresso/Pipeline.git', branch: 'main', credentialsId: 'gradle-github'])
+        git([url: 'https://github.com/ctorresso/Pipeline.git', branch: 'main', credentialsId: 'github'])
 
       }
     }
